@@ -1,1 +1,1 @@
-print("Hello Aya!")
+print("kaya ko? ambot.")
