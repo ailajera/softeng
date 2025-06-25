@@ -32,7 +32,7 @@ jobs:
         run: |
           for file in ${{ steps.changes.outputs.files }}; do
             name=$(basename "$file" .py)
-            test_file="tests/test_${name}.py"
+            test_file="tests/${name}.py"
             if [ -f "$test_file" ]; then
               echo "Running: python -m unittest ${test_file%.*}"
               python -m unittest "${test_file%.*}"
