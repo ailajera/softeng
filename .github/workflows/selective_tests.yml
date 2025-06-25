@@ -34,10 +34,11 @@ jobs:
             name=$(basename "$file" .py)
             test_file="tests/${name}.py"
             if [ -f "$test_file" ]; then
-              echo "Running: python -m unittest ${test_file%.*}"
-              python -m unittest "${test_file%.*}"
+              module_name="${test_file%.py}"
+              module_name="${module_name//\//.}"
+              echo "Running: python -m unittest $module_name"
+              python -m unittest "$module_name"
             else
               echo "No test file found for $file"
             fi
           done
-
