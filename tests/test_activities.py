@@ -5,6 +5,7 @@ from activities.list_processor import list_processor
 from activities.login_system import login 
 from activities.grade_checker import get_grade 
 from activities.translator import translator 
+from activities.fizzbuzz import fizzbuzz 
 
 class TestListProcessor(unittest.TestCase):
     def test_list_processor(self):
@@ -54,3 +55,12 @@ class TestTranslator(unittest.TestCase):
             output = captured_output.getvalue()
             self.assertIn(expected, output)
 
+class TestFizzBuzz(unittest.TestCase):
+    def test_fizzbuzz(self):
+        self.assertEqual(fizzbuzz(1), ["1"])
+        self.assertEqual(fizzbuzz(3), ["1", "2", "Fizz"])
+        self.assertEqual(fizzbuzz(5), ["1", "2", "Fizz", "4", "Buzz"])
+        self.assertEqual(fizzbuzz(15), [
+            "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz",
+            "11", "Fizz", "13", "14", "FizzBuzz"
+        ])
