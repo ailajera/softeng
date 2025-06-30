@@ -1,8 +1,12 @@
 # START HERE
 def list_processor(numbers):
-    pass
+    for number in numbers:
+        if number % 2 == 0:
+         print(f"{number} is even")
+        else: 
+         print(f"{number} is odd")   
 ##
 
-if __name__ == "main":
-    sample_numbers = [1, 2, 3, 4, 5]
-    list_processor(sample_numbers)
+
+sample_numbers = [1, 2, 3, 4, 5]
+list_processor(sample_numbers)
