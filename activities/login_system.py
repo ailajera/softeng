@@ -4,7 +4,7 @@ def login(username, password):
 
 ##
 
-if __name__ == "main":
+if __name__ == "__main__":
     uname = None # GET INPUT HERE
     pwd = None # GET INPUT HERE 
     print(login(uname, pwd))
