@@ -13,7 +13,6 @@ def get_grade(score):
         return("A")
 
 #
-
-
-score = int(input("Enter score: "))
-print(f"Grade: {get_grade(score)}")
+if __name__ == "__main__":
+    score = int(input("Enter score: "))
+    print(f"Grade: {get_grade(score)}")

@@ -7,6 +7,6 @@ def list_processor(numbers):
          print(f"{number} is odd")   
 ##
 
-
-sample_numbers = [1, 2, 3, 4, 5]
-list_processor(sample_numbers)
+if __name__ == "__main__":
+    sample_numbers = [1, 2, 3, 4, 5]
+    list_processor(sample_numbers)
