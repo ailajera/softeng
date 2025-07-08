@@ -5,8 +5,7 @@ def login(username, password):
         return("Login Successful")
     else:
         return("Invalid credentials")
-# napipikon na ko kanina pa ko nagbabago. di ko alam bat failed bye. 
-#antok na ko bukas na to
+
 ##
 
 if __name__ == "__main__":
