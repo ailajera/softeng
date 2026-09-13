@@ -5,7 +5,7 @@ app = FastAPI(title="Tasks")
 def root():
     return "ok"
 
-tasks: list[dict] = []
+tasks = []
 """
 a task should look like
 {
@@ -14,7 +14,7 @@ a task should look like
     "done": False
 }
 """
-next_id: int = 1
+next_id = 1
 
 @app.post("/tasks")
 def create_task(task_in):
